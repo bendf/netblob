@@ -1,0 +1,10 @@
+
+body {
+    /*Get rid of the default 8px body margin */
+    margin: 0px;
+}
+canvas {
+    width : 100%;
+    height: 100%;
+
+}
