@@ -24,7 +24,12 @@ function init() {
     $("#canvas").attr("width", wWidth).attr("height", wHeight);
 }
 
+
+define(' 
+
 requirejs(["domReady!","underscore", "easel", "jquery"], function(doc,_, easel, $) {
+
+
 
     init();
 
