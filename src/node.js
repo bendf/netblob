@@ -6,8 +6,6 @@ define(['easel'],function(easel) {
         this.color = color;
 
         this.graphics.beginFill(color).drawCircle(0,0,50);
-
-
     }
 
 
