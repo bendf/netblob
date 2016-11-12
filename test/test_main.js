@@ -19,6 +19,10 @@ requirejs.config({
         },
         'testlib/jasmine-html' : {
             deps: ['testlib/jasmine']
+        },
+        'testlib/jasmine-matchers': {
+            deps: ['testlib/custom_boot']     
+            
         }/*,
         'testlib/imagediff' : {
             exports: 'imagediff' 
@@ -42,9 +46,9 @@ window.tearDownCanvas = function() {
 
 }
 
-requirejs(['domReady!', 'testlib/custom_boot', 'jquery', 'easel', 'testlib/imagediff'],
-function(doc, jasmine, $, easel, imagediff) {
-    requirejs(['spec/node_spec', 'spec/scratch_spec'], function() {
+requirejs(['domReady!', 'testlib/custom_boot', 'testlib/jasmine-matchers', 'jquery', 'easel', 'testlib/imagediff'],
+function(doc, jasmine, _, $, easel, imagediff) {
+    requirejs(['spec/graph_spec'], function() {
         window.onload(); 
 
     });
